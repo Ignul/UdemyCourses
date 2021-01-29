@@ -8,9 +8,10 @@
 """
 # Your Code Below:
 
+def separate(text):
+    return list(text)
 
-
-
+print(separate('labaslabaslabas xd'))
 
 
 
