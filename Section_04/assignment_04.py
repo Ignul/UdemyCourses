@@ -9,16 +9,6 @@ grow_string('ab') → 'aab'
 
 """
 
-def grow_string(str):
-
-    result = ""
-
-    for i in range(len(str)):
-        result = result + str[:i + 1]
-
-    return result
-
-print(grow_string("Imtiaz"))
 
 
 

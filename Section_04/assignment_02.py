@@ -17,12 +17,6 @@ Example:
     pay_extra(True, 6)  -> true
 """
 
-def pay_extra(working, hour):
-    return (working and (hour < 8 or hour > 20))
-
-
-
-
 
 
 
