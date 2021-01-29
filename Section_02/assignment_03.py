@@ -13,6 +13,12 @@ original_list = ['cup', 'cereal', 'milk', (8, 4, 3)]
 
 # your code below:
 
+# Assuming we don't know how many numbers could the tuple have. Also assuming its the last element.
+sorting_numbers = [x for x in original_list.pop()]
+sorting_numbers.sort()
+original_list.append(tuple(sorting_numbers))
+
+print(original_list)
 
 
 
