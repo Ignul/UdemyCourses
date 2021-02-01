@@ -22,24 +22,32 @@ Value of d:
 """
 
 # Don't manually change fr and d.
-fr = [
-'7@comp1.COM|4|11|GDSPV',
-'7@comp1.COM|16|82|GDSPV',
-'13@comp1.COM|12|82|GDSPV',
-'26@comp1.COM|19|82|GDSPV'
-]
+fr = ['7@comp1.COM|4|11|GDSPV', '7@comp1.COM|16|82|GDSPV', '13@comp1.COM|12|82|GDSPV',
+      '26@comp1.COM|19|82|GDSPV']
 
-d= {
-'7@comp1.COM': '199',
-'8@comp4.COM': '200',
-'13@comp1.COM': '205'
-}
+d= {'7@comp1.COM': '199', '8@comp4.COM': '200', '13@comp1.COM': '205'}
 
+fr_split = []
 
-# Your Code below:
+# Let's split the items in fr.
+for item in fr:
+    fr_split.append(item.split('|'))
 
+# Get and check the emails in d.
+for email in fr_split:
+    # email is the first item in the list so: email[0]
+    # Let's start by checking if there are any mismatches:
+    if email[0] not in d:
+        max_value = int(max(d.values()))
+        d[email[0]] = str(max_value + 1)
+    # If there's an email:
+    if email[0] in d:
+        email[0] = d[email[0]]
 
-
+# Now all that's left is to correct fr and we're done.
+fr = []
+for item in fr_split:
+    fr.append('|'.join(item))
 
 # don't change the below:
 # --------------------------------------
@@ -49,4 +57,4 @@ print("Value of d:")
 print(d)
 
 
-
+# Will also check the other solutions.

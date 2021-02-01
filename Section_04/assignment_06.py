@@ -16,5 +16,23 @@ last2('axxxaaxx') → 2
 
 """
 
+def last2(text):
+    # Ok, this may look nasty, but what it does is: takes the last 2 chars from the string and reverses it again.
+    last_chars = text[:-3:-1][::-1]
+    # The input text without last 2 letters.
+    stripped_text = text[:-2]
+    counter = 0
+    for index in range(1, len(stripped_text)):
+        if last_chars == text[index-1:index+1]:
+            counter += 1
+    return counter
+
+print(last2('hixxhi'))
+print(last2('xaxxaxaxx'))
+print(last2('axxxaaxx'))
+
+# My tests
+print(last2('axxaxxxxaxx')) # should be 4
+
 
 
