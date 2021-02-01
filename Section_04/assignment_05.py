@@ -16,39 +16,3 @@ first3([1, 2, 3, 4, 5]) → False
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Solution:
-
-# def first3(numbers):
-#     # First figure the end for the loop
-#     end = len(numbers)
-#     if end > 4:
-#         end = 4
-#
-#     for i in range(end):  # loop over index [0, 1, 2, 3]
-#         if numbers[i] == 6:
-#             return True
-#     return False

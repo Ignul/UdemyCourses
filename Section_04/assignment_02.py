@@ -17,28 +17,11 @@ Example:
     pay_extra(True, 6)  -> true
 """
 
+def pay_extra(working, hour):
+    if working and (hour < 8 or hour > 20):
+        return True
+    return False
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Solution
-# def pay_extra(working, hour):
-#     return (working and (hour < 8 or hour > 20))
+print(pay_extra(True, 11))
+print(pay_extra(False, 5))
+print(pay_extra(True, 6))

@@ -12,38 +12,14 @@ twelver(9, 3) → True
 
 """
 
+def twelver(a, b):
+    if a == 12 or b == 12:
+        return True
+    elif a + b == 12:
+        return True
+    return False
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Solution:
-# def twelver(a, b):
-#   return (a == 12 or b == 12 or a+b == 12)
+print(twelver(3, 12))
+print(twelver(4, 9))
+print(twelver(9, 3))
+print(twelver(6, 5))
