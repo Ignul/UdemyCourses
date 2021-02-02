@@ -17,8 +17,9 @@ last2('axxxaaxx') → 2
 """
 
 def last2(text):
-    # Ok, this may look nasty, but what it does is: takes the last 2 chars from the string and reverses it again.
-    last_chars = text[:-3:-1][::-1]
+    #Get the last 2 chars.
+    last_chars = text[-2:]
+    print(last_chars)
     # The input text without last 2 letters.
     stripped_text = text[:-2]
     counter = 0
