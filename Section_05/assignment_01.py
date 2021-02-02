@@ -23,22 +23,22 @@ class Animal:
         print("This needs to be overwritten.")
 
     def eat(self):
-        print(self.name + " is eating!")
+        print(self.__class__.__name__ + " is eating!")
 
 class Dog(Animal):
 
     def move(self):
-        print("Dog is moving")
+        print("Dog is running")
 
 class Fish(Animal):
 
     def move(self):
-        print("Fish is moving")
+        print("Fish is swimming")
 
 class Bird(Animal):
 
     def move(self):
-        print("Bird is moving")
+        print("Bird is flying")
 
 dog1 = Dog("Rex", 5)
 fish1 = Fish("Gold fish", 2)
