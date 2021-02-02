@@ -13,3 +13,37 @@ dog, fish and bird and make them eat and move.
 
 """
 
+class Animal:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def move(self):
+        print("This needs to be overwritten.")
+
+    def eat(self):
+        print(self.name + " is eating!")
+
+class Dog(Animal):
+
+    def move(self):
+        print("Dog is moving")
+
+class Fish(Animal):
+
+    def move(self):
+        print("Fish is moving")
+
+class Bird(Animal):
+
+    def move(self):
+        print("Bird is moving")
+
+dog1 = Dog("Rex", 5)
+fish1 = Fish("Gold fish", 2)
+bird1 = Bird("Parrot", 3)
+
+for ob in [dog1, fish1, bird1]:
+    ob.move()
+    ob.eat()
